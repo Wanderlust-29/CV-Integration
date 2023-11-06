@@ -7,6 +7,7 @@ body {
     grid-template-rows: 10vh 90Vh 20vh;
     font-family: 'Montserrat', sans-serif;
     font-size:14px;
+    color:white;
 }
 
 /*HEADER*/
@@ -47,8 +48,8 @@ header > nav > ul{
 }
 header > nav > ul > li > a{
     font-size:1.2rem;
-    color:white;
     text-decoration: none;
+    color:white;
 }
 header > nav > ul > li{
     list-style-type: none;
@@ -60,19 +61,82 @@ header > nav > ul > li{
 
 main{
     display:grid;
-    grid-template-rows:1fr 1fr;
+    grid-template-rows:15% auto 15%;
+    grid-template-columns: 10% auto 10%;
 }
 
-main > section:first-of-type{
-    grid-row:1;
-    display:grid;
-    grid-template-columns:50% 50%;
-}
-
-main > section:first-of-type img {
+/*PRESENTATION*/
+.container{
+    grid-row:2;
     grid-column:2;
+    display:grid;
+    grid-template-columns: 33.33% auto 33.33%;
+    grid-template-rows:50% 50%;
+}
+.container h2{
+    font-family:'Cabin', sans-serif;
+    font-size:6rem;
+    font-weight:700;
+    margin:0;
+}
+.container > section:first-of-type p{
+    font-family:'Cabin', sans-serif;
+    font-size:3.5rem;
+    font-weight:700;
+    margin:0;
 }
 
-main > section:first-of-type h2, p {
-    grid-column:1
+
+.container > section:first-of-type{
+    align-self:center;
+}
+
+.container > section:nth-of-type(2){
+    grid-column:3/4;
+    align-self:center;
+    justify-self:center;
+}
+
+.container img{
+    width:10rem;
+}
+
+.projets {
+    grid-row:2;
+    grid-column:1/4;
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:15px
+}
+
+.projets > p{
+    grid-row:1;
+    grid-column:1/4;
+    align-self:end;
+    font-family:'Cabin', sans-serif;
+    font-size:2.5rem;
+    font-weight:700;
+}
+
+.projets > section > h3{
+    font-family:'Cabin', sans-serif;
+    font-size:1.7rem;
+    font-weight:700;
+}
+.projets > section > h3{
+    font-family:'Cabin', sans-serif;
+    font-size:1.3rem;
+    font-weight:600;
+}
+
+.projets > section > a {
+    text-underline-offset: 0.25rem;
+    color:white;
+}
+
+.projets > section {
+    background-color:  #b7094c;
+    gap: 10px;
+    padding:20px 10px;
 }
